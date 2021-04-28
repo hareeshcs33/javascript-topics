@@ -49,6 +49,56 @@ var person4 = {
 
 console.log(saySomething.call(person4, 'awesome!'));
 
+//apply()
+/*
+
+The apply method is similar to the call() method. 
+The only difference is that,
+call() method takes arguments separately whereas, 
+apply() method takes arguments as an array.
+
+*/
+
+function saySomething2(message){
+    return this.name + ' is ' + message + ' apply example 1';
+}
+var person5 = {
+    name: 'hareesh'
+}
+console.log(saySomething2.apply(person5, ['awesome!!!']));
+
+//bind()
+/*
+
+This method returns a new function, where the value of 'this'
+keyword will be bound to the owner object, 
+which is provided as a parameter.
+
+*/
+var bikeDetails = {
+    displayDetails: function(regNumber, brandName){
+        return this.name + ',' + ' bike details: ' + regNumber + ', ' + brandName;
+    }
+}
+
+var person12 = {
+    name: 'hareesh'
+}
+var detailsOfPerson = bikeDetails.displayDetails.bind(person12, 'ka27ec1020', 'honda');
+
+console.log(detailsOfPerson());
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
