@@ -1,0 +1,62 @@
+console.log('call apply bind methods');
+
+//call(), apply(), and bind() methods
+
+//call()
+
+/*
+
+it's a predefined method in javascript
+this method invokes a method (function) by specifying the owner object.
+
+*/
+
+//example 1
+
+function sayHello(){
+    return "hello " + this.name + ' this is call method example 1';
+}
+var obj = {
+    name: 'hareesh'
+}
+
+console.log(sayHello.call(obj));
+
+//example 2
+//call method allows an object to use the method (function) of another object.
+
+var person = {
+    age: 27,
+    getAge: function(){
+        return this.age + ' this age value is call example 2';
+    }
+}
+var person2 = {
+    age: 28
+};
+
+console.log(person.getAge.call(person2));
+
+//example 3
+//call() accepts arguments
+
+function saySomething(message){
+    return this.name + ' is ' + message + ' call example 3';
+}
+var person4 = {
+    name: 'hareesh'
+}
+
+console.log(saySomething.call(person4, 'awesome!'));
+
+
+
+
+
+
+
+
+
+
+
+
