@@ -39,6 +39,18 @@ console.log(person.getAge.call(person2));
 
 //example 3
 //call() accepts arguments
+/*
+
+The call method sets the this inside the function and 
+immediately executes that function.
+
+The difference between call() and bind() is that the 
+call() sets the this keyword and executes the function 
+immediately and it does not create a new copy of the 
+function, while the bind() creates a copy of that function 
+and sets the this keyword.
+
+*/
 
 function saySomething(message){
     return this.name + ' is ' + message + ' call example 3';
