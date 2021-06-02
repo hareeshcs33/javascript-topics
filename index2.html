@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xhr examples</title>
+</head>
+<body>
+    <button id="getData">Get Data</button>
+    <button id="postData">Post Data</button>
+    
+<script>
+
+document.getElementById('getData').addEventListener('click', loadGetData);
+document.getElementById('postData').addEventListener('click', loadPostData);
+
+function loadGetData(){
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://reqres.in/api/users', true);
+    xhr.onload = () => {
+        const data = JSON.parse(xhr.responseText)
+        console.log(data);
+    }
+    xhr.send();
+}
+function loadPostData(){
+    console.log('load Post data');
+}
+
+</script>
+</body>
+</html>
