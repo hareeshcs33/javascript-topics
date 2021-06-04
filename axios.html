@@ -6,11 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>axios examples</title>
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+    crossorigin="anonymous">
+
+        <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <!-- axios cdn -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     
-    <script src="./axios.js"></script>
+
 </head>
 <body>
-    
+    <h1>axios</h1>
+    <div class="container">
+        <div class="d-flex flex-wrap">
+            <button class="btn btn-primary btn-sm m-1 px-4" id="get">Get</button>
+            <button class="btn btn-primary btn-sm m-1 px-4" id="post">Post</button>
+            <button class="btn btn-primary btn-sm m-1 px-4" id="put">Put</button>
+            <button class="btn btn-primary btn-sm m-1 px-4" id="patch">patch</button>
+            <button class="btn btn-primary btn-sm m-1 px-4" id="delete">delete</button>
+            <button class="btn btn-primary btn-sm m-1 px-4" id="sim">simultaneous</button>
+            <button class="btn btn-primary btn-sm m-1 px-4" id="customHeader">custom header</button>
+            <button class="btn btn-primary btn-sm m-1 px-4" id="transformResponse">transform Response</button>
+            <button class="btn btn-primary btn-sm m-1 px-4" id="error">Error Handling</button>
+            <button class="btn btn-primary btn-sm m-1 px-4" id="cancelToken">Cancel Token</button>
+        </div>
+        <div id="res"></div>
+    </div>
+
+    <script src="./axios.js"></script>
 </body>
 </html>

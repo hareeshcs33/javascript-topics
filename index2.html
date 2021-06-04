@@ -27,6 +27,18 @@ function loadGetData(){
 function loadPostData(){
     console.log('load Post data');
 }
+function loadPostData(){
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', 'https://reqres.in/api/users', JSON.stringify({
+        "name": "morpheus",
+        "job": "leader"
+    }));
+    xhr.setRequestHeader('Content-type', 'application/json')
+    xhr.onload = () => {
+        console.log(xhr.responseText);
+    }
+    xhr.send();
+}
 
 </script>
 </body>
